@@ -3,38 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--MMM: "O que você escreveu na linha de código 67?"-->
-    <header class="home-header">
-        <h1 class="home-header">Portfolio de Marcos Santos Bueno</h1>
-        <p class="home-header">Bem vindo ao meu portfólio profissional!</p>
-        <div>
-            <nav class="home-header">
-                <a class="link" href="#">Home</a>
-                <a class="link" href="#sobre-mim">Sobre mim</a>
-                <a class="link" href="curriculo.html">Currículo</a>
-                <a class="link" href="certificados.html">Certificados</a>
-                <a class="link" href="projetos-pessoais.html">Projetos Pessoais</a>
-            </nav>
+    <div class="toggle" onclick="toggleMenu();"></div>
+
+    <section class="banner" id="home">
+
+        <div class="imgSidebar">
+            <img src="imagens/melhor-foto.jpg" alt="">
         </div>
-    </header>
+        <div class="contentBx">
+                <h5 class="logoText">Portfolio</h5>
+            <div>
+                <h4><span>Olá</span>, Eu sou</h4>
+                <h2>Marcos Santos Bueno</h2>
+                <h4>Sou um desenvolvedor FullStack iniciante</h4>
+                <a href="#about" class="btn">Sobre mim</a>
+            </div>
+        </div>
 
-    <br><br>
-    <h1 id="sobre-mim">Quem sou?</h1>
-    <!--Diego Eiti: "Quero deixar registrado o quanto admiro a habilidade de comunicação do meu amigo Marcos. Nos trabalhos em grupo, ele sempre consegue se expressar de forma clara e confiante, transmitindo as ideias de maneira organizada e envolvente. Isso faz toda a diferença, principalmente quando precisamos apresentar projetos ou explicar conceitos técnicos. Além de ter domínio do conteúdo, ele sabe como falar com o público e manter a atenção de todos. É uma qualidade que inspira e contribui muito para o desempenho do grupo e o sucesso das nossas atividades na universidade."-->
-    <p id="sobre-mim">Olá prazer em conhecer, eu sou Marcos Vinicius Santos da Cunha Bueno, um desenvolvedor iniciante.
-        Sempre me interessei pela área de tecnologia desde pequeno e logo cedo decidi que seria isso que seguiria para minha vida. Gosto de séries, filmes, desenhos, livros, mangás, etc.
-    </p>
-    <p id="sobre-mim">Meus passatempos principais são: jogar, ler e trabalhar em meus projetos.</p>
-    <p id="sobre-mim">Conheça minhas redes!</p>
-    <p id="sobre-mim">Github<a class="link" href="https://github.com/Marcossantosbdev" target="_blank">Clique aqui!</a></p>
-    <p id="sobre-mim">LinkedIn <a class="link" href="https://www.linkedin.com/in/marcos-santos-bueno">Clique aqui!</a></p>
+        <div>
+            <ul class="sci">
+                <li><a href="https://github.com/Marcossantosbdev"><img src="imagens/pngfind.com-github-logo-png-198304.png" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/in/marcos-santos-bueno"><img src="imagens/pngfind.com-linkedin-icon-png-1026200.png" alt=""></a></li>
+            </ul>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Marcos Vinicius Santos da Cunha Bueno Direitos Reservados.</p>
-    </footer>
+        <section class="about" id="about">
+            <div class="title white">
+                <h2>Sobre mim</h2>
+                <p>Estudante de análise e Desenvolvimento de sistemas</p>
+            </div>
+            <div class="content">
+                <div class="textBx">
+                    <p>Busco avançar no campo da tecnologia, um setor rico em oportunidades para inovação, criatividade e desenvolvimento de soluções. Tenho interesse especial em inteligência artificial, onde pretendo aplicar meus conhecimentos para contribuir com projetos e inovações nesta área em crescimento.</p>
+                </div>
+            </div>
+
+            <div class="imgBx">
+                <img src="imagens/bg2.jpg" alt="">
+            </div>
+            
+        </section>
+
+        <div class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="index.html#about" onclick="toggleMenu();">Sobre mim</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contato</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="projetos-pessoais.html">Projetos-pessoais</a></li>
+        </ul>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="title white">
+            <h2>Contato</h2>
+            <br>
+            <p>Entre em contato comigo!</p>
+        </div>
+        <form action="https://formspree.io/f/xyznbgrw" method="POST">
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col150">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="tel" name="telefone" placeholder="Número de telefone" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <textarea name="mensagem" placeholder="Digite sua mensagem!" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const sidebar = document.querySelector('.sidebar');
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

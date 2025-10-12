@@ -1,24 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos Pessoais</title>
+    <title>Projetos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Venha ver meus projetos!</h1>
-        <p>Alguns projetos pessoais até o momento.</p>
-        <p>Rumo a entregar projetos profissionais.</p>
+    <!--<h1>CHEGA CHEGA</h1>-->
+    <section class="work" id="work">
 
-        <a href="index.html">Home</a>
-        <a href="indexmusica.html">Sobre meu gosto musical</a>
-        <a href="https://github.com/Marcossantosbdev/Repositorio-Python">Projetos em Python</a>
-    </header>
+        <div class="toggle" onclick="toggleMenu();"></div>
 
-    <footer>
-        <p>&copy; 2025 Marcos Vinicius Santos da Cunha Bueno Direitos Reservados.</p>
-    </footer>
+        <div class="title">
+            <h2>Meus projetos</h2>
+            <br><br>
+            <p>Estes são os projetos que já trabalhei ou estou trabalhando no momento!</p>
+        </div>
+
+        <div class="content">
+            <div class="workBx" onclick="window.location.href='https://github.com/Marcossantosbdev/MusicIndex';" style="cursor:pointer;">
+            <div class="imgBx">
+                <img src="img1.jpg" alt="">
+            </div>
+            <div class="textBx">
+                <h3>Projeto índice de música</h3>
+            </div>
+         </div>
+        <div class="content">
+            <div class="workBx" onclick="window.location.href='https://github.com/Marcossantosbdev/Repositorio-Python';" style="cursor: pointer;"">
+                <div class="imgBx">
+                    <img src="img2.jpg" alt="">
+                </div>
+                <div class="textBx">
+                    <h3>Projetos Python</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="index.html#about" onclick="toggleMenu();">Sobre mim</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contato</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="projetos-pessoais.html">Projetos-pessoais</a></li>
+        </ul>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="title white">
+            <h2>Contato</h2>
+            <br>
+            <p>Entre em contato comigo!</p>
+        </div>
+        <form action="https://formspree.io/f/xyznbgrw" method="POST">
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col150">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="tel" name="telefone" placeholder="Número de telefone" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <textarea name="mensagem" placeholder="Digite sua mensagem!" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const sidebar = document.querySelector('.sidebar');
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

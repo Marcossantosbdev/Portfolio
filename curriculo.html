@@ -1,56 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
     <link rel="stylesheet" href="style.css">
-    <title>Currículo</title>
 </head>
 <body>
-    <header>
-        <h1>Veja meu currículo!</h1>
-        <p>Aqui estão reunidas informações sobre:</p>
-        <nav>
-            <a class="link" href="index.html">Home</a>
-            <a class="link" href="#formacao">Formação</a>
-            <a class="link" href="#graduacao">Graduação</a>
-            <a class="link" href="#conhecimento">Conhecimento</a>
-            <a class="link" href="#trabalho">Experiência</a>
-            <!--<a class="link" href=""></a>-->
-        </nav>
-    </header>
+    <!--Milton Caraglio-->
+    <section class="banner" id="curriculo">
+        <!--<div class="imgSidebar">
 
-    <br><br>
-    <h2 id="formacao">Formação</h2>
-    <h3>Escolaridade</h3>
-    <p>Ensino Médio completo.</p>
-    <p>Sendo destaque na sala e ganhador da medalha de bronze na OBMEP 2024.</p>
-    <p>Elogiado por professores e colegas pela resiliência, paciência e proatividade</p>
-    <br>
-    <h3 id="graduacao">Graduação</h3>
-    <p>Cursando Análise e Desenvolvimento de Sistemas (2025-2027)</p>
-    <p>Universidade de Mogi das Cruzes - UMC</p>
-    <p>Rumo a pós-graduação ou mais uma graduação</p>
-    <br>
-    <h3 id="conhecimento">Conhecimentos</h3>
-    <h4>Desenvolvimento Full Stack (Front-end e Back-end)</h4>
-    <h5>Python</h5>
-    <p>Conhecimento básico sobre Python com leves práticas ao dia</p>
-    <p>Projetos em Python</p>
-    <a href="https://github.com/Marcossantosbdev/Repositorio-Python">Projeto principal em Python</a>
-    <br>
-    <h5>Desenvolvimento Front-end</h5>
-    <p>Conhecimento básico sobre, HTML, CSS, JavaScript e PHP</p>
-    <h5>Git e Github</h5>
-    <p>Controle de versionamento básico</p>
-    <br>
-    <h3 id="trabalho">Experiência Profissional</h3>
-    <p>Já trabalhei algumas vezes com meu pai auxiliando na administração</p>
-    <p>Atualmente trabalho na empresa NEOHYPEONE como operador de telemarketing</p>
-    <a href="https://www.neohype.co">Clique aqui para ir ao site da empresa</a>
+        </div>-->
 
-    <footer>
-        <p>&copy; 2025 Marcos Vinicius Santos da Cunha Bueno Direitos Reservados.</p>
-    </footer>
+        <div class="toggle" onclick="toggleMenu();"></div>
+
+        <div class="title">
+            <h2>Meu currículo</h2>
+            <br><br>
+            <p>Aqui está meu currículo com minha trajetória profissional</p>
+            <br><br>
+            <!--<a href="Currículo.pdf" download>Baixar PDF</a>-->
+            <iframe src="Currículo.pdf" width="65%" height="350px"></iframe>
+        </div>
+
+        <div class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="index.html#about" onclick="toggleMenu();">Sobre mim</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contato</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="projetos-pessoais.html">Projetos-pessoais</a></li>
+        </ul>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="title white">
+            <h2>Contato</h2>
+            <br>
+            <p>Entre em contato comigo!</p>
+        </div>
+        <form action="https://formspree.io/f/xyznbgrw" method="POST">
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col150">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="tel" name="telefone" placeholder="Número de telefone" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <textarea name="mensagem" placeholder="Digite sua mensagem!" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const sidebar = document.querySelector('.sidebar');
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

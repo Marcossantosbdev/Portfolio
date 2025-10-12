@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +7,92 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Veja meus certificados</h1>
-    <h1>Aqui, poderá ver todos meus certificados até o momento</h1>
-    <a href="index.html">Home</a>
-    <a href="#cuco">Certificados CUCO</a>
-    <a href="#salesforce">Certificados Salesforce</a>
-    <h2 id="cuco">Certificado CUCO 2024</h2>
-    <!--<iframe src="imagens/certificado-cuco-2023-59888-7D706-54447-E8E67.pdf" width="100%" height="500px"></iframe>-->
-    <!--<embed src="imagens/certificado-cuco-2023-59888-7D706-54447-E8E67.pdf" type="application/pdf" width="100%" height="600px">-->
-        <a href="imagens/certificado-cuco-2023-59888-7D706-54447-E8E67.pdf" target="_blank">Clique para ver o certificado</a>
-        <h2 id="salesforce">Certificados Salesforce</h2>
+    <section class="banner" id="certificados">
+        <!--<div class="imgSidebar">
+
+        </div>-->
+
+        <div class="toggle" onclick="toggleMenu();"></div>
+
+        <div class="title">
+            <h2>Meus Certificados</h2>
+            <br><br>
+            <p>Estes são meus certificados</p>
+            <br><br>
+            <div class="certificado-cuco">
+                <h2>Certificado Cuco</h2>
+                <iframe src="certificado-cuco-2023-59888-7D706-54447-E8E67.pdf" width="70%" height="100px"></iframe>
+            </div>
+        </div>
+
+        <!--<div class="certificado-cuco">
+            <h2>Certificado Cuco</h2>
+            <iframe src="certificado-cuco-2023-59888-7D706-54447-E8E67.pdf" width="70%" height="150px"></iframe>
+        </div>-->
         
-    <footer>
-        <p>&copy; 2025 Marcos Vinicius Santos da Cunha Bueno Direitos Reservados.</p>
-    </footer>
+
+        <div class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html" onclick="toggleMenu();">Home</a></li>
+            <li><a href="index.html#about" onclick="toggleMenu();">Sobre mim</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contato</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="projetos-pessoais.html">Projetos-pessoais</a></li>
+        </ul>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="title white">
+            <h2>Contato</h2>
+            <br>
+            <p>Entre em contato comigo!</p>
+        </div>
+        <form action="https://formspree.io/f/xyznbgrw" method="POST">
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col150">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+            <div class="contactForm">
+                <div class="row">
+                    <div class="col50">
+                        <input type="tel" name="telefone" placeholder="Número de telefone" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <textarea name="mensagem" placeholder="Digite sua mensagem!" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col100">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const sidebar = document.querySelector('.sidebar');
+            menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+    <!--<h1>Mama i'm chasing a ghost</h1>
+    <h2>But I don't know ho he is</h2>-->
 </body>
 </html>
