@@ -166,7 +166,7 @@ p {
 /*Ícones interativos*/
 .sci {
     position: absolute;
-    left: 100px;
+    left: 600px;
     bottom: 20px;
     display: flex;
     justify-content: center;
@@ -174,7 +174,7 @@ p {
 }
 
 .sci li {
-    margin-right: 10px;
+    margin-right: 5px;
     list-style: none;
 }
 
@@ -203,58 +203,7 @@ p {
     letter-spacing: 1px;
 }
 
-.title p {
-    max-width: 700px;
-    display: inline-block;
-}
 
-.title h2::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-    width: 60px;
-    height: 4px;
-    background: #000;
-}
-
-.title.white h2,
-.title.white p {
-    color: #fff;
-}
-
-.title.white h2::before {
-    background: #fff;
-}
-
-.about {
-    background: #000;
-}
-
-.about .content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-
-}
-
-.about .content .textBx {
-    min-width: 49%;
-    width: 49%;
-}
-
-.about .content .textBx p {
-    color: #fff;
-}
-
-.about .content .imgBx {
-    margin-left: 40px;
-}
-
-.about .content .imgBx img {
-    max-width: 90%;
-}
 
 .work .content {
     display: flex;
