@@ -372,3 +372,58 @@ p {
     text-align: center;
     padding: 10px;
 }
+
+/*Desktops pequenos em até 1920px (FullHD)*/
+
+/*@media screen and (min-width: 1025px) and (max-width: 1920px) {
+    .banner .imgSidebar {
+    width: 40%;
+  }
+  .banner .contentBx {
+    width: 60%;
+    padding: 50px;
+    font-size: 1rem;
+  }
+}
+
+/*Desktops médios de 1921px a 2560px (2K)*/
+/*@media screen and (min-width: 1921px) and (max-width: 2560px) {
+    .banner .imgSidebar {
+    width: 35%;
+  }
+  .banner .contentBx {
+    width: 65%;
+    padding: 70px;
+    font-size: 1.125rem;
+  }
+}
+/*Monitores grandes acima de 2561px (4K e Ultra-wide)*/
+
+/*@media screen and (min-width: 2561px) {
+    .banner .imgSidebar {
+    width: 30%;
+  }
+  .banner .contentBx {
+    width: 70%;
+    padding: 100px;
+    font-size: 1.25rem;
+  }
+}
+/*Celulares*/
+
+/*@media screen and (max-width: 480px) {
+    .banner .contentBx h2 {
+        font-size: 2em;
+    }
+}
+
+/*Tablets*/
+/*@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .banner .contentBx h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (orientation: landscape) {
+
+}
